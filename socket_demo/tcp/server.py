@@ -1,5 +1,6 @@
 import socket
 
+
 def main():
     s = socket.socket()
     print("socket created successfully")
@@ -20,7 +21,6 @@ def main():
         c.send('Thank you for connecting'.encode())
 
         c.close()
-
 
 
 main()
