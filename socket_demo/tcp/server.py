@@ -2,39 +2,32 @@
 server.py
 """
 import socket
+from porta import PORT, BUFFER_SIZE
+import time
 
 
-BUFFER_SIZE = 1024
+
 
 
 def main():
     """
     :return:
     """
-    s = socket.socket()
-    print("socket created successfully")
 
-    port = 12345
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    s.bind(('', port))
-    print("socket binded to %s" %(port))
+    s.bind(('', PORT))
 
-    s.listen(5)
-    print("socket is listening")
-
-    while True:
-        print("here at start")
-
-        c, addr = s.accept()
-        print("'Got connection from", addr)
+    s.listen(10)
+    i = 0
+    c, addr = s.accept()
+    rec_msg = c.recv(BUFFER_SIZE)
+    while rec_msg:
+        print("recv i", i)
         rec_msg = c.recv(BUFFER_SIZE)
-        print("rec:", rec_msg)
+        i += 1
+    c.close()
 
-        sent_msg = 'Thank you for connecting'.encode()
-        c.send(sent_msg)
-        print("sent:", sent_msg)
-
-        c.close()
-        print("\n\n")
 
 main()
+
