@@ -23,3 +23,6 @@ UDP
 | local |     14ms    |   9ms     | 5ms  | 2ms|
 | remote | 17ms|     8ms  | 6ms  |2ms|
 
+
+
+UDP send takes 1 micro second; TCP send takes 1 microsecond to 10 miliseconds with a large fraction towards miliseconds side
