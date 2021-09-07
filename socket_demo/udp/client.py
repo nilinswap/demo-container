@@ -22,7 +22,9 @@ def main():
     l = f.read(porta.BUFFER_SIZE)
     while l:
         #print("sizeof l", len(l))
+        _start_time = time.time()
         UDPClient.sendto(l, (server_ip, server_port))
+        print("everytime", time.time() - _start_time)
         l = f.read(porta.BUFFER_SIZE)
     UDPClient.close()
 
