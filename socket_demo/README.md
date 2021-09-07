@@ -9,7 +9,17 @@ we are gonna run it in local system vs remote system
 
 TCP
 
-| | .5KB      | 1KB | 2KB |
-|--------| ----------- | ----------- | -------- |
-| local |       |   27ms     |   |
-| remote |    |         |   |
+| | .5KB      | 1KB | 2KB |16KB|
+|--------| ----------- | ----------- | -------- |--------|
+| local |     133ms    |   27ms     | 50ms  | 1.5ms|
+| remote | 1s|     1.2s  | 1.1s  |1.4s|
+
+
+
+UDP
+
+| | .5KB      | 1KB | 2KB |16KB|
+|--------| ----------- | ----------- | -------- |--------|
+| local |     133ms    |   27ms     | 50ms  | 1.5ms|
+| remote | 1s|     1.2s  | 1.1s  |1.4s|
+

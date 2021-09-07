@@ -3,8 +3,7 @@ client.py
 """
 import socket
 import time
-
-BUFFER_SIZE = 1024
+import porta
 
 
 def main():
@@ -13,18 +12,21 @@ def main():
     :return:
     """
 
+    start_time = time.time()
+
     UDPClient = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     server_ip = '127.0.0.1'
-    server_port = 1234
-    clientMessage = "Hi, this is client.".encode()
-    while True:
+    server_port = porta.BUFFER_SIZE
+    f = open("/Users/nilinswap/forgit/nilinswap/demo-container/socket_demo/scalability_rules.pdf", "rb")
+    l = f.read(porta.BUFFER_SIZE)
+    while l:
+        # print("sizeof l", len(l))
+        UDPClient.sendto(l, (server_ip, server_port))
+        l = f.read(porta.BUFFER_SIZE)
+    UDPClient.close()
 
-        UDPClient.sendto(clientMessage, (server_ip, server_port))
-
-        serverMessage = UDPClient.recvfrom(BUFFER_SIZE)
-        print("message from server", serverMessage[0])
-        time.sleep(5)
+    print("full", time.time() - start_time)
 
 main()
 

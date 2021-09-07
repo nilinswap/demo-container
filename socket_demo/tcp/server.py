@@ -3,10 +3,6 @@ server.py
 """
 import socket
 from porta import PORT, BUFFER_SIZE
-import time
-
-
-
 
 
 def main():
