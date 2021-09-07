@@ -19,7 +19,6 @@ def main():
     c, addr = s.accept()
     rec_msg = c.recv(BUFFER_SIZE)
     while rec_msg:
-        print("recv i", i)
         rec_msg = c.recv(BUFFER_SIZE)
         i += 1
     c.close()

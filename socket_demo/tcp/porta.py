@@ -3,4 +3,5 @@ Common variables
 """
 
 PORT = 1234
-BUFFER_SIZE = 1024*35
+factor = 32
+BUFFER_SIZE = int(1024*factor)

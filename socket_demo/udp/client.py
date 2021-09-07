@@ -16,7 +16,7 @@ def main():
 
     UDPClient = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    server_ip = ''
+    server_ip = '127.0.0.1'
     server_port = porta.BUFFER_SIZE
     f = open("/Users/nilinswap/forgit/nilinswap/demo-container/socket_demo/scalability_rules.pdf", "rb")
     l = f.read(porta.BUFFER_SIZE)
