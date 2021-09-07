@@ -9,9 +9,9 @@ def main():
     i = 0
     start_time = time.time()
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print("this part done da 1")
-    s.connect(('65.1.131.84', PORT))
-    print("this part done da")
+    # print("this part done da 1")
+    s.connect(('', PORT))
+    # print("this part done da")
     # sent_msg = "message from client {}".format(s.getsockname()).encode()
     # s.send(sent_msg)
     # print("sent: sent to server", sent_msg)
