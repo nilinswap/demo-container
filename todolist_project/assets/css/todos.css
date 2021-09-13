@@ -1,0 +1,112 @@
+body{
+	background: white;
+	font-family: Roboto;
+}
+
+h1{
+	background: #2980b9;
+	color:white;	
+	margin: 0;
+	font-weight: normal;
+	font-size: 24px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+
+}
+
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+li{
+	background: white;
+	line-height: 40px;
+	height: 40px;
+	color: #444;
+
+}
+
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+input:focus {
+	background:#fff;
+	border: 2px solid  #2980b9;
+	outline: none;
+
+}
+
+
+
+span{
+	background: yellow;
+	margin-right:10px;
+	height:40px;
+	width: 0px;
+	text-align: center;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+body{
+	background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+img.plus{
+/*margin: 0px 0px 0px 160px;*/
+float: right;
+width: 30px;
+height: 30px
+}
+
+img.garbage{
+width: 0px;
+opacity: 0;
+height: 15px;
+}
+
+li:hover img.garbage{
+	width:15px;
+	opacity: 1.0;
+}
+
+
+#new_item{
+	font-size: 18px;
+	padding: 13px 13px 13px 13px;
+	width: 100%;
+	box-sizing: border-box;
+	color:  #2980b9;
+	height:100%;
+	/*border: 2px solid rgba(0, 0, 0, 0);*/
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+.container{
+	
+	margin: 100px auto;
+	width: 360px;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+	
+
+
+}
