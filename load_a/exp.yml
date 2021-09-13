@@ -1,0 +1,14 @@
+config:
+  target: 'http://someshit.com'
+  phases:
+    - duration: 600
+      arrivalRate: 40
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - get:
+        url: "/debug"
+        followRedirect: true
+

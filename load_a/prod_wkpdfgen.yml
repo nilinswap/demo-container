@@ -1,0 +1,16 @@
+config:
+  target: 'http://www.someshit.com'
+  phases:
+    - duration: 1
+      arrivalRate: 1
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+      - post:
+          url: '/pdf_html_lt'
+          beforeRequest: 'setJSONBody'
+          afterResponse: 'logResponse'
+          formData:
+            html: 'world'

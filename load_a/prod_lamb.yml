@@ -1,0 +1,12 @@
+config:
+  target: 'https://some_api.amazonaws.com'
+  phases:
+    - duration: 6
+      arrivalRate: 24
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - get:
+        url: "/?some_shit"
